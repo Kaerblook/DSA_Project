@@ -76,9 +76,9 @@ def expense_chart(expenses: pd.DataFrame, curr_symbol: str = "₱") -> None:
     highest_category = highest_expense["Category"]
     date_text = (highest_date.strftime("%b %d, %Y") if pd.notna(highest_date) else "Date unavailable")
 
-    st.markdown("**Highest expense:***")
+    st.markdown("**Highest expense:**")
     st.write(
-        f"{highest_name} ({highest_category}) ---"
+        f"{highest_name} ({highest_category}) --- "
         f"{curr_symbol}{highest_amount:,.2f} on {date_text}"
     )
 
