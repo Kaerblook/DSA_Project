@@ -134,6 +134,7 @@ else:
                     if confirmation:
                         delete_expense(sel_exp_id)
                         st.success("Successfully deleted.")
+                        time.sleep(1)
                         st.rerun()
                     else:
                         st.error("Please confirm in order to delete the transaction")
